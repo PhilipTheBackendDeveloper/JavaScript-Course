@@ -1,0 +1,71 @@
+
+.red-button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+.yellow-button {
+    background-color: yellowgreen;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    outline: none;
+    font-weight: bold;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    &:hover {
+        background-color: #559b2f;
+    }
+    &:active {
+        background-color: #4c7b26;
+    }
+    
+}
+
+.yellow-cart{
+    background-color: yellowgreen;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    outline: none;
+    font-weight: bold;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    &:hover {
+        background-color: #559b2f;
+    }
+    &:active {
+        background-color: #4c7b26;
+    }
+}
+.orange-buy{
+
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    outline: none;
+    font-weight: bold;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    &:hover {
+        background-color: #559b2f;
+    }
+    &:active {
+        background-color: #4c7b26;
+    }
+}
