@@ -45,6 +45,74 @@
      console.log(!false);
      console.log(!(0.2 >= 0));
      console.log(!(0.2 >= 0.3));
+
+
+     // truthy and falsy values
+     if(0) {
+       console.log("This will not run");
+     }
+     console.log(Boolean(0));
+
+     const cartQuantity = 5;
+     if (cartQuantity){
+      console.log("cat has quantity " + cartQuantity);
+     }
+
+     // Ternary operation
+
+      const result = true ? 'truthy' : 'falsy';
+      console.log(result);
+
+     // this a long way for this 
+     if (true) {'truthy' }
+     else { 'falsy' }
+
+     // Guard operation
+     false && console.log('this will not run');
+
+     // Short Circuiting Operation - Default operator
+     false || console.log('this will run');
+
+     const currency = 'EUR' || 'USD';
+     console.log(currency); // EUR
+
+
+     const forex = undefined || 'USD';
+     console.log(forex); // EUR
+
+     // the long way for the above
+    // if (condition){
+    //  console.log('this will not run');
+    // }
+    
+     // Nullish Coalescing Operator
+     const name = null || 'John Doe';
+     console.log(name); // John Doe
+     const age2 = 0 || 25;
+     console.log(age2); // 25
+
+     // Optional Chaining
+     const user = {
+       name: 'John Doe',
+       address: {
+         street: '123 Main St',
+         city: 'New York',
+         state: 'NY'
+       }
+     };
+
+     // Switch statement
+     const color ='red';
+     switch(color) {
+       case'red':
+         console.log('Color is red');
+         break;
+       case 'blue':
+         console.log('Color is blue');
+         break;
+       default:
+         console.log('Color is not red or blue');
+     }
   </script>
 </body>
 </html>
