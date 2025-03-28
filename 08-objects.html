@@ -109,6 +109,58 @@
 
     console.log(object5); // Output: {message: 'bye'}
     object5.method();
+
+
+    const product = {
+      name: 'Laptop',
+      price: 1500,
+      category: 'Electronics'
+    };
+
+    // 1. Object.freeze() - Prevents modification
+    Object.freeze(product);
+    product.price = 1800; // This won't change
+    console.log(product.price); // Output: 1500 (unchanged)
+
+    // 2. Object.seal() - Allows changes but prevents adding/removing properties
+    const car = { brand: 'Toyota', model: 'Camry' };
+    Object.seal(car);
+    car.model = 'Corolla';  // Allowed
+    car.year = 2024;        // Not allowed
+    console.log(car);       // Output: { brand: 'Toyota', model: 'Corolla' }
+
+    // 3. Checking if a Property Exists
+    console.log(product.hasOwnProperty('price')); // Output: true
+    console.log('category' in product);          // Output: true
+    console.log('discount' in product);          // Output: false
+
+    // 4. Looping Through Object Properties
+    for (let key in product) {
+      console.log(`${key}: ${product[key]}`);
+    }
+    /*
+    Output:
+    name: Laptop
+    price: 1500
+    category: Electronics
+    */
+
+    // 5. Cloning & Merging Objects
+    const obj1 = { a: 1, b: 2 };
+    const obj2 = { c: 3, d: 4 };
+
+    // Using Object.assign()
+    const merged1 = Object.assign({}, obj1, obj2);
+    console.log(merged1); // Output: { a: 1, b: 2, c: 3, d: 4 }
+
+    // Using Spread Operator
+    const merged2 = { ...obj1, ...obj2 };
+    console.log(merged2); // Output: { a: 1, b: 2, c: 3, d: 4 }
+
+    // 6. Object Destructuring with Default Values
+    const user = { username: 'Ayesu', age: 21 };
+    const { username, age, country = 'Ghana' } = user;
+    console.log(username, age, country); // Output: Ayesu 21 Ghana
   </script>
 </body>
 </html> 
