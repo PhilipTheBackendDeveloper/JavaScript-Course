@@ -23,6 +23,24 @@
 
     calculateTax(200, 0.2);
     calculateTax(5000)
+   // Function Return Values
+   // Right now, your calculateTax function logs the result, but functions can also return values:
+    function calculateTax(cost, taxPercent = 0.1) {
+      return cost * taxPercent;
+    }
+    
+    let taxAmount = calculateTax(200, 0.2);
+    console.log(taxAmount); // 40
+
+    
+    //Arrow Functions (ES6)
+    //A shorter way to write functions:
+    
+    
+    const calculateTax = (cost, taxPercent = 0.1) => cost * taxPercent;
+console.log(calculateTax(200, 0.2));
+
+    
   </script>
 </body>
 </html>
