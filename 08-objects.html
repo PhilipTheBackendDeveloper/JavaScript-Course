@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  <script>
+    /*
+    const product = {
+      name: 'socks',
+      price: 100,
+    };
+    console.log(product.name); // Output: socks
+    console.log(product.price); // Output: 100
+    console.log(product);  // Output: {name: 'socks', price: 100}
+    console.log(product['name']); // Output: socks
+    console.log(product['price']); // Output: 100
+
+    product.name = 'shoes';
+    console.log(product.name); // Output: shoes
+
+    product.newProperty = true;
+    console.log(product); // Output: {name: 'shoes', price: 100, newProperty: true} 
+
+    delete product.newProperty;
+    console.log(product); // Output: {name: 'shoes', price: 100}
+    */
+    const product2 = {
+      name: "shirt",
+      ['delivery-time']: '1 day',
+      rating : {
+        stars : 4.5,
+        count: 100,
+      },
+      fun: function function1(){
+        console.log('function inside object')
+      }
+    };
+    console.log(product2); // Output:
+    console.log(product2.name); // Output:
+    console.log(product2['delivery-time']); // Output: 1 day
+    console.log(product2.rating.stars); // Output: 4.5
+    console.log(product2.rating.count); // Output: 100
+    product2.fun(); // Output:
+
+    console.log(typeof console.log);
+
+
+    console.log(JSON.stringify(product2)); // Output: JSON object containing the product name and ratiNg information 
+
+
+
+
+
+    const jsonString = JSON.stringify(product2);
+    console.log(JSON.parse(jsonString));  // Output: JSON object containing
+
+
+
+    console.log('hello'.length); // Output: 5
+    console.log('hello'.toUpperCase()); // Output: HELLO
+    console.log('hello'.slice(1, 3)); // Output: el
+
+
+    const objects1 = {
+      message: 'hello',
+
+    };
+
+    const objects2 = objects1;
+
+    objects1.message = 'bye';
+    console.log(objects1.message); // Output: bye
+    console.log(objects2.message); // Output: bye
+
+
+    const object3 = {
+      message: 'bye'
+    };
+    console.log(object3 === objects1); // Output: false
+    console.log(objects2 === objects1); // Output: true
+    
+
+    const object4 = {
+      message: 'bye',
+      price :799
+    };
+
+    //const message = object4.message
+    const { message, price } = object4;
+    console.log(message); // Output: bye
+    console.log(price); // Output: 799
+
+
+
+    const object5 = {
+      //message: message,
+      message,
+     // method: function function1(){
+     //   console.log('method');
+    //  }
+
+    method(){
+        console.log('method');
+      }
+    };
+
+    console.log(object5); // Output: {message: 'bye'}
+    object5.method();
+
+
+    const product = {
+      name: 'Laptop',
+      price: 1500,
+      category: 'Electronics'
+    };
+
+    // 1. Object.freeze() - Prevents modification
+    Object.freeze(product);
+    product.price = 1800; // This won't change
+    console.log(product.price); // Output: 1500 (unchanged)
+
+    // 2. Object.seal() - Allows changes but prevents adding/removing properties
+    const car = { brand: 'Toyota', model: 'Camry' };
+    Object.seal(car);
+    car.model = 'Corolla';  // Allowed
+    car.year = 2024;        // Not allowed
+    console.log(car);       // Output: { brand: 'Toyota', model: 'Corolla' }
+
+    // 3. Checking if a Property Exists
+    console.log(product.hasOwnProperty('price')); // Output: true
+    console.log('category' in product);          // Output: true
+    console.log('discount' in product);          // Output: false
+
+    // 4. Looping Through Object Properties
+    for (let key in product) {
+      console.log(`${key}: ${product[key]}`);
+    }
+    /*
+    Output:
+    name: Laptop
+    price: 1500
+    category: Electronics
+    */
+
+    // 5. Cloning & Merging Objects
+    const obj1 = { a: 1, b: 2 };
+    const obj2 = { c: 3, d: 4 };
+
+    // Using Object.assign()
+    const merged1 = Object.assign({}, obj1, obj2);
+    console.log(merged1); // Output: { a: 1, b: 2, c: 3, d: 4 }
+
+    // Using Spread Operator
+    const merged2 = { ...obj1, ...obj2 };
+    console.log(merged2); // Output: { a: 1, b: 2, c: 3, d: 4 }
+
+    // 6. Object Destructuring with Default Values
+    const user = { username: 'Ayesu', age: 21 };
+    const { username, age, country = 'Ghana' } = user;
+    console.log(username, age, country); // Output: Ayesu 21 Ghana
+  </script>
+</body>
+</html> 
