@@ -1,0 +1,79 @@
+!<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Arrays and Loops</title>
+    <link rel="stylesheet" href="styles/challenge-10.css">
+</head>
+<body>
+    <script>
+      /*  const myArray= [10,20,30];
+        console.log(myArray[0]); // 10
+        myArray[0] = 100; // change the first element
+        console.log(myArray[0]); // 100
+        myArray.push(40); // add a new element to the end
+        console.log(myArray); // [100, 20, 30, 40]
+
+        [1, "hello", true, {name: "John"}]
+        // Arrays can hold different types of data
+        const myArray2 = [1, "hello", true, {name: "John"}];
+        console.log(myArray2[1]); // "hello"
+
+        Array.isArray([1, 2, 3]); // true
+        Array.isArray("hello"); // false
+
+        console.log(myArray.length); // 4
+
+        myArray.push(50);
+        console.log(myArray); // [100, 20, 30, 40, 50]
+
+        myArray.splice(2, 1); // remove 1 element at index 2
+        console.log(myArray); // [100, 20, 40, 50]
+        
+
+        let i = 1;
+        while (i <= 10){
+            console.log(i);
+            i++;
+        }
+
+
+        for (let i = 1; i <= 10; i++) {
+            console.log(i);
+
+        }
+            
+
+            const todoList = [
+            'Make dinner',
+            'Wash plates',
+            'Watch youtube'];
+
+            for (let i = 0; i <todoList.length; i++){
+                const value = todoList[i]
+                console.log(value);
+            }
+            */
+
+            const nums  = [1, 2, 3, 4, 5];
+            let total =0;
+
+            for (let i = 0; i < nums.length; i++) {
+                const num = nums[i];
+                total += num; // add each number to total
+
+
+            }
+            console.log(total); // 15
+
+            // Create a copy if the array with each number doubled
+            const numsDoubled = [];
+            for (let i = 0; i< nums.length; i++){
+                const num = nums[i];
+                numsDoubled.push(num * 2); // double each number and add to new
+
+            }
+            console.log(numsDoubled); // [2, 4, 6, 8, 10] 
+    </script>
+</body>
+</html>
